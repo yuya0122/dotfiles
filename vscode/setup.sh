@@ -20,4 +20,7 @@ for i in ${pkglist[@]}; do
   code --install-extension $i
 done
 
+# dockに追加
+dockutil --add "/Applications/Visual Studio Code.app"
+
 echo 👍 VSCode setting is done!

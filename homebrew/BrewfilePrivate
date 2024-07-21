@@ -2,6 +2,7 @@
 
 # brewに存在するCLIアプリ
 brew "git"
+brew "dockutil"
 
 # brewに存在するデスクトップアプリ
 cask "visual-studio-code"
