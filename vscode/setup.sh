@@ -11,6 +11,8 @@ pkglist=(
   ms-ceintl.vscode-language-pack-ja 
   # Devcontainer
   ms-vscode-remote.remote-containers
+  # Git
+  mhutchie.git-graph
 )
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
