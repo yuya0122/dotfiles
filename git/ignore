@@ -1,0 +1,32 @@
+# This file is derived from A collection of .gitignore templates.
+# https://github.com/github/gitignore
+# License - https://github.com/github/gitignore/blob/master/LICENSE (CC0-1.0.)
+# 
+# ----- For macOS -----
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+

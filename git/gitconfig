@@ -1,0 +1,6 @@
+[user]
+	name = REPLACEME_GIT_NAME
+	email = REPLACEME_GIT_EMAIL
+[pull]
+	# v2.27からwarningが出るようになったため設定
+	rebase = false
