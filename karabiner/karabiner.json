@@ -18,6 +18,38 @@
                 },
                 "rules": [
                     {
+                        "description": "change 英数 to 英数 when used with command （英数とcommandを同時に押してしまった場合でも英数キーが効くようにする）",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "japanese_eisuu",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "japanese_eisuu"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "japanese_eisuu"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "japanese_eisuu"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "description": "change かな to right_command when used with other keys",
                         "manipulators": [
                             {

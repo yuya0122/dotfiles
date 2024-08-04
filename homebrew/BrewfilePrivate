@@ -9,9 +9,9 @@ cask "visual-studio-code"
 cask "google-chrome"
 cask "docker"
 cask "karabiner-elements"
-cask "utm"
 cask "clipy"
 cask "alt-tab"
+cask "notion"
 
 # APP Storeからインストールする必要があるデスクトップアプリ
 mas "LINE", id: 539883307
