@@ -1,9 +1,9 @@
 # Homebrewインストール
-source homebrew/install-homebrew.sh
+source "$(dirname "$0")/install-homebrew.sh"
 
 # Brewfile実行
 read -p "Press O for office use, press any key for private use :  " install_env
-cd $PWD/homebrew
+cd "$(dirname "$0")"
 if [ "$install_env" = "O" ]; then
   brew bundle --file BrewfileOffice
 else

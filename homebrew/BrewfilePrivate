@@ -12,6 +12,7 @@ cask "karabiner-elements"
 cask "clipy"
 cask "alt-tab"
 cask "notion"
+cask "iterm2"
 
 # APP Storeからインストールする必要があるデスクトップアプリ
 mas "LINE", id: 539883307
