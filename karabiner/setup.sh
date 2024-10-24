@@ -4,4 +4,4 @@ mkdir -p ~/.config/karabiner
 # settings.jsonの設置
 ln -sf $PWD/karabiner/karabiner.json ~/.config/karabiner
 
-echo 👍 Git setting is done!
+echo 👍 Karabiner setting is done!
