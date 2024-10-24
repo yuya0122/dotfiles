@@ -1,3 +1,8 @@
+# --- カスタムディレクトリの作成 ---
+# スクショの保存先
+mkdir -p ~/ScreenShots/
+mkdir -p ~/Local
+
 # --- Finderの設定 ---
 # 隠しファイルを表示
 defaults write com.apple.finder AppleShowAllFiles -boolean true
@@ -23,7 +28,8 @@ killall Dock
 defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d HH:mm'
 # スクリーンショットのドロップシャドウを付けない
 defaults write com.apple.screencapture disable-shadow -boolean true
-
+# スクリーンショットの保存先を変更
+defaults write com.apple.screencapture location ~/ScreenShots/
 killall SystemUIServer
 
 # ---　トラックパッドの設定　---
@@ -37,5 +43,16 @@ defaults -currentHost write -g com.apple.mouse.tapBehavior -bool true
 defaults write com.apple.TextEdit RichText -int 0
 # 自動で頭文字を大文字にしない
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+#　フォルダ名を日本語表記にしたくないので、localizedファイルを削除する
+rm -f ~/Applications/.localized
+rm -f ~/Documents/.localized
+rm -f ~/Downloads/.localized
+rm -f ~/Desktop/.localized
+rm -f ~/Public/.localized
+rm -f ~/Pictures/.localized
+rm -f ~/Music/.localized
+rm -f ~/Movies/.localized
+rm -f ~/Library/.localized
+rm -f /Applications/.localized
 
 echo 👍 MacOS setting is done, please reboot!
