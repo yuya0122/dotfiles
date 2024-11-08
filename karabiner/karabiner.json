@@ -245,23 +245,22 @@
             ]
           },
           {
-            "description": "Change shift+0 to underscore",
+            "description": "Shift + 0 to question mark (?)",
             "manipulators": [
               {
+                "type": "basic",
                 "from": {
                   "key_code": "0",
                   "modifiers": {
-                    "mandatory": ["shift"],
-                    "optional": ["any"]
+                    "mandatory": ["shift"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "international1",
-                    "modifiers": []
+                    "key_code": "slash",
+                    "modifiers": ["shift"]
                   }
-                ],
-                "type": "basic"
+                ]
               }
             ]
           }
