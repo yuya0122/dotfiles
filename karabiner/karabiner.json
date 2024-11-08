@@ -1,210 +1,212 @@
 {
-    "profiles": [
-        {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "change 英数 to 英数 when used with command （英数とcommandを同時に押してしまった場合でも英数キーが効くようにする）",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "japanese_eisuu",
-                                    "modifiers": { "mandatory": ["left_command"] }
-                                },
-                                "to": [{ "key_code": "japanese_eisuu" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "japanese_eisuu" },
-                                "to": [{ "key_code": "japanese_eisuu" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "change かな + ijkl to arrow and かな + m to delete",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "japanese_kana",
-                                    "modifiers": {
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_kana"
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "set_variable": {
-                                            "name": "cursor_mode",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "cursor_mode",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 5 },
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_if",
-                                        "name": "cursor_mode",
-                                        "value": 1
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow"
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_if",
-                                        "name": "cursor_mode",
-                                        "value": 1
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_if",
-                                        "name": "cursor_mode",
-                                        "value": 1
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_if",
-                                        "name": "cursor_mode",
-                                        "value": 1
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": {
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace"
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_if",
-                                        "name": "cursor_mode",
-                                        "value": 1
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change shift+0 to underscore",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "0",
-                                    "modifiers": {
-                                        "mandatory": ["shift"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "international1",
-                                        "modifiers": []
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "change 英数 to 英数 when used with command （英数とcommandを同時に押してしまった場合でも英数キーが効くようにする）",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "japanese_eisuu",
+                  "modifiers": { "mandatory": ["left_command"] }
+                },
+                "to": [{ "key_code": "japanese_eisuu" }],
+                "type": "basic"
+              },
+              {
+                "from": { "key_code": "japanese_eisuu" },
+                "to": [{ "key_code": "japanese_eisuu" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "change かな + ijkl to arrow and かな + m to delete",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "japanese_kana",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to_if_alone": [
+                  {
+                    "key_code": "japanese_kana"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "set_variable": {
+                      "name": "cursor_mode",
+                      "value": 1
                     }
-                ]
-            },
-            "name": "Default profile",
-            "selected": true,
-            "simple_modifications": [
-                {
-                    "from": { "key_code": "left_command" },
-                    "to": [{ "key_code": "left_option" }]
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "cursor_mode",
+                      "value": 0
+                    }
+                  }
+                ],
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 5
                 },
-                {
-                    "from": { "key_code": "left_control" },
-                    "to": [{ "key_code": "left_command" }]
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
                 },
-                {
-                    "from": { "key_code": "left_option" },
-                    "to": [{ "key_code": "left_control" }]
-                }
-            ],
-            "virtual_hid_keyboard": {
-                "country_code": 0,
-                "keyboard_type_v2": "jis"
-            }
+                "to": [
+                  {
+                    "key_code": "up_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "cursor_mode",
+                    "value": 1
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "cursor_mode",
+                    "value": 1
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "cursor_mode",
+                    "value": 1
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "cursor_mode",
+                    "value": 1
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "cursor_mode",
+                    "value": 1
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Change shift+0 to underscore",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "0",
+                  "modifiers": {
+                    "mandatory": ["shift"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "international1",
+                    "modifiers": []
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "name": "Default profile",
+      "selected": true,
+      "simple_modifications": [
+        {
+          "from": { "key_code": "left_command" },
+          "to": [{ "key_code": "left_option" }]
+        },
+        {
+          "from": { "key_code": "left_control" },
+          "to": [{ "key_code": "left_command" }]
+        },
+        {
+          "from": { "key_code": "left_option" },
+          "to": [{ "key_code": "left_control" }]
         }
-    ]
+      ],
+      "virtual_hid_keyboard": {
+        "country_code": 0,
+        "keyboard_type_v2": "jis"
+      }
+    }
+  ]
 }
