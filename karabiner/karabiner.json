@@ -22,7 +22,7 @@
             ]
           },
           {
-            "description": "change かな + ijkl to arrow and かな + m to delete",
+            "description": "change かな + ijkl to arrow and かな + h to delete",
             "manipulators": [
               {
                 "from": {
@@ -143,7 +143,7 @@
               },
               {
                 "from": {
-                  "key_code": "m",
+                  "key_code": "h",
                   "modifiers": {
                     "optional": ["any"]
                   }
