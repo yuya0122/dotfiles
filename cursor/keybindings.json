@@ -1,0 +1,18 @@
+[
+  // vscodeの行削除コマンドを効かせるためにcursorの設定を削除
+  {
+    "key": "shift+cmd+k",
+    "command": "-aipopup.action.modal.generate",
+    "when": "editorFocus && !composerBarIsVisible"
+  },
+  // vscodeの選択範囲の全選択を効かせるためにcursorの設定を削除
+  {
+    "key": "shift+cmd+l",
+    "command": "-aichat.insertselectionintochat"
+  },
+  // vscodeの行削除コマンドを効かせるためにcursorの設定を削除
+  {
+    "key": "shift+cmd+k",
+    "command": "-composer.openAsBar"
+  }
+]

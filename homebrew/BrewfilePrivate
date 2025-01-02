@@ -1,10 +1,12 @@
 # cf. https://github.com/Homebrew/homebrew-bundle
 
-# brewに存在するCLIアプリ
+# brew に存在する CLI アプリ
+
 brew "git"
 brew "dockutil"
 
-# brewに存在するデスクトップアプリ
+# brew に存在するデスクトップアプリ
+
 cask "visual-studio-code"
 cask "google-chrome"
 cask "docker"
@@ -13,6 +15,9 @@ cask "clipy"
 cask "alt-tab"
 cask "notion"
 cask "iterm2"
+cask "cursor"
+cask "chatgpt"
 
-# APP Storeからインストールする必要があるデスクトップアプリ
+# APP Store からインストールする必要があるデスクトップアプリ
+
 mas "LINE", id: 539883307
