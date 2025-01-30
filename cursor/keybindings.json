@@ -17,5 +17,9 @@
   {
     "key": "cmd+l",
     "command": "-aichat.newchataction"
+  },
+  {
+    "key": "cmd+l",
+    "command": "expandLineSelection"
   }
 ]
