@@ -22,7 +22,7 @@
             ]
           },
           {
-            "description": "かなを押している状態でijklhを押すと、arrow(ijklの場合)とdelete(hの場合)になる",
+            "description": "かなを押している状態でijklを押すと、arrowになる",
             "manipulators": [
               {
                 "from": {
