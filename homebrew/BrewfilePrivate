@@ -17,6 +17,7 @@ cask "notion"
 cask "iterm2"
 cask "cursor"
 cask "chatgpt"
+cask "rectangle"
 
 # APP Store からインストールする必要があるデスクトップアプリ
 
