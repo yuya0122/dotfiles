@@ -4,9 +4,6 @@ ln -sf $PWD/cursor/keybindings.json ~/Library/Application\ Support/Cursor/User/
 
 # プラグインのインストール
 pkglist=(
-  # GitHub Copilot
-  github.copilot-chat
-  github.copilot
   # Japanese Language Pack for Visual Studio Code
   ms-ceintl.vscode-language-pack-ja 
   # Devcontainer
